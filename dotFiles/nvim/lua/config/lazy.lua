@@ -35,10 +35,6 @@ vim.opt.expandtab = true
 -- highlight cursor
 vim.opt.cursorline = true
 
--- enable lsp
-vim.lsp.enable('pyright')
-vim.lsp.enable('lua-language-server')
-
 -- Override after colorscheme loads
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
