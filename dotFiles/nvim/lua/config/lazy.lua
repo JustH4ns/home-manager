@@ -39,6 +39,9 @@ vim.opt.cursorline = true
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
+-- Use system clipboard
+vim.api.nvim_set_option("clipboard", "unnamed")
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
