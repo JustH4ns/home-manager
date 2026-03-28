@@ -15,6 +15,7 @@
     pkgs.ripgrep
     pkgs.fd
     pkgs.nerd-fonts.meslo-lg
+    pkgs.opencode
   ];
 
   # Let Home Manager install and manage itself.
