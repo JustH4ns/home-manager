@@ -38,6 +38,12 @@
         username = "jan.kulka";
         homeDirectory = "/Users/jan.kulka";
       };
+
+      "jank@cybertop" = mkHome {
+        system = "x86_64-linux";
+        username = "jank";
+        homeDirectory = "/home/jank";
+      };
     };
   };
 }
