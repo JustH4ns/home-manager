@@ -31,6 +31,7 @@
         system = "x86_64-linux";
         username = "jank";
         homeDirectory = "/home/jank";
+        extraModules = [ ./modules/linux.nix ];
       };
 
       "jan.kulka@workmac" = mkHome {
@@ -43,6 +44,7 @@
         system = "x86_64-linux";
         username = "jank";
         homeDirectory = "/home/jank";
+        extraModules = [ ./modules/linux.nix ];
       };
     };
   };
