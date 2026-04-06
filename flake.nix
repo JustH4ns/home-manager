@@ -38,6 +38,7 @@
         system = "aarch64-darwin";
         username = "jan.kulka";
         homeDirectory = "/Users/jan.kulka";
+        extraModules = [ ./modules/darwin.nix ];
       };
 
       "jank@cybertop" = mkHome {
