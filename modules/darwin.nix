@@ -4,6 +4,7 @@
 
 home.packages = [
     pkgs.gvproxy
+    pkgs.glab
 ];
 services.podman = {
         enable = true;
