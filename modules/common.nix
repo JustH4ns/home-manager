@@ -21,7 +21,10 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  programs.neovim.enable = true;
+  programs.neovim = {
+	enable = true;
+	sideloadInitLua = true;
+  };
 
   xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink
     "${config.home.homeDirectory}/.config/home-manager/dotFiles/nvim";
