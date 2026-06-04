@@ -17,6 +17,7 @@
     pkgs.nerd-fonts.meslo-lg
     pkgs.opencode
     pkgs.tree-sitter
+    pkgs.bun
   ];
 
   # Let Home Manager install and manage itself.
