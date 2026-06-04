@@ -14,7 +14,7 @@ services.podman = {
                 memory = 4096;
                 diskSize = 100;
                 autoStart = true;
-                rootful = true;
+                rootful = false;
             };
         };
         useDefaultMachine = false;
