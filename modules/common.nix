@@ -48,6 +48,7 @@
         tab_bar_style = "powerline";
         background_opacity = 0.98;
         cursor_shape = "beam";
+        auto_reload_config = "-1";
     };
     keybindings = {
         "f5" = "launch --location=vsplit";
