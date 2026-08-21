@@ -70,7 +70,7 @@
         "kitty_mod+k" = "scroll_line_up";
         "cmd+k" = "scroll_line_up";
         "cmd+up" = "scroll_line_up";
-        "kitty_mod+down" = "scroll_line_down"; 
+        "kitty_mod+down" = "scroll_line_down";
         "kitty_mod+j" = "scroll_line_down";
         "cmd+j" = "scroll_line_down";
         "cmd+down" = "scroll_line_down";
@@ -80,5 +80,15 @@
         "alt+right" = "send_text all \\x1b\\x66";
     };
   };
-}
 
+  programs.zed-editor = {
+    enable = true;
+    extensions = [
+      "dockerfile"
+      "nix"
+      "astro"
+      "vue"
+      "ansible"
+    ];
+  };
+}
