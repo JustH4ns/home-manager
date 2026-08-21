@@ -17,7 +17,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
           ./modules/common.nix
-          { 
+          {
             home.username = username;
             home.homeDirectory = homeDirectory;
           }
@@ -31,7 +31,7 @@
         system = "x86_64-linux";
         username = "jank";
         homeDirectory = "/home/jank";
-        extraModules = [ ./modules/linux.nix ];
+        extraModules = [ ./modules/linux.nix ./modules/personal.nix ];
       };
 
       "jan.kulka@workmac" = mkHome {
