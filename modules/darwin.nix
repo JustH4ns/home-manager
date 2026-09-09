@@ -11,10 +11,10 @@ services.podman = {
         machines = {
             "work"  = {
                 cpus = 5;
-                memory = 4096;
+                memory = 8192;
                 diskSize = 100;
                 autoStart = true;
-                rootful = false;
+                rootful = true;
             };
         };
         useDefaultMachine = false;
