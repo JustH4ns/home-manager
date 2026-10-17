@@ -1,4 +1,3 @@
-local actions = require("telescope.actions")
 return {
     'nvim-telescope/telescope.nvim', version = '*',
     dependencies = {
@@ -6,13 +5,18 @@ return {
         -- optional but recommended
         { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     },
-    opts = {
-        defaults = {
-            mappings = {
-                i = {
-                    ["<esc>"] = actions.close,
+    -- opts as a function so telescope.actions is required only after lazy.nvim
+    -- has installed and loaded the plugin
+    opts = function()
+        local actions = require("telescope.actions")
+        return {
+            defaults = {
+                mappings = {
+                    i = {
+                        ["<esc>"] = actions.close,
+                    },
                 },
             },
-        },
-    },
+        }
+    end,
 }
