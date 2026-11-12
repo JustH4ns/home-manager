@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, opencodePkgs, ... }:
 
 {
   # This value determines the Home Manager release that your
@@ -15,7 +15,7 @@
     pkgs.ripgrep
     pkgs.fd
     pkgs.nerd-fonts.meslo-lg
-    pkgs.opencode
+    opencodePkgs.opencode
     pkgs.tree-sitter
     pkgs.bun
   ];

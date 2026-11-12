@@ -8,9 +8,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixpkgs-opencode.url = "github:NixOS/nixpkgs/436e34e0bb929ffed9857ad34d74254ad5101d17";
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager, nixpkgs-opencode, ... }:
   let
     mkHome = { system, username, homeDirectory, extraModules ? [] }:
       home-manager.lib.homeManagerConfiguration {
@@ -22,8 +23,10 @@
             home.homeDirectory = homeDirectory;
           }
         ] ++ extraModules;
-        extraSpecialArgs = { inherit username homeDirectory; };
-      };
+        extraSpecialArgs = { 
+            inherit username homeDirectory;
+            opencodePkgs = import nixpkgs-opencode { system = "aarch64-darwin"; };
+      };};
   in {
     homeConfigurations = {
 
